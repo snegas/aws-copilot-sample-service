@@ -12,7 +12,6 @@ phases:
       - mv ./copilot-linux-v1.28.0 ./copilot-linux
       - chmod +x ./copilot-linux
       - pip install cfn-lint
-      - ls -al ~/.pyenv/versions/3.9.16/bin/
   build:
     commands:
       - echo "Hello"
@@ -33,6 +32,7 @@ phases:
           fi
         done;
       - ls -lah ./infrastructure
+      - export PATH="$HOME/.pyenv/versions/3.9.16/bin:$PATH"
       - cf-lint infrastructure/**/.yaml
 artifacts:
   files:
