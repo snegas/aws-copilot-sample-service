@@ -12,7 +12,7 @@ phases:
       - mv ./copilot-linux-v1.28.0 ./copilot-linux
       - chmod +x ./copilot-linux
       - pip install cfn-lint
-      - ls -al ~/.pyenv/versions/3.9.16/
+      - ls -al ~/.pyenv/versions/3.9.16/bin/
   build:
     commands:
       - echo "Hello"
