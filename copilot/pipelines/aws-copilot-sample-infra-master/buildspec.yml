@@ -32,7 +32,7 @@ phases:
           fi
         done;
       - ls -lah ./infrastructure
-      - cfn-lint infrastructure/**/.yaml
+      - cfn-lint ./infrastructure/**/.yml
 artifacts:
   files:
     - "infrastructure/*"
