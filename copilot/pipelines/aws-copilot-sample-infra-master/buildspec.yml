@@ -14,7 +14,8 @@ phases:
       - pip3 install cfn-lint
   build:
     commands:
-      - cf-lint infrastructure/**/.yaml
+      - echo "Run your tests"
+      # - make test
   post_build:
     commands:
       - ls -l
@@ -32,6 +33,7 @@ phases:
           fi
         done;
       - ls -lah ./infrastructure
+      - cf-lint infrastructure/**/.yaml
 artifacts:
   files:
     - "infrastructure/*"
