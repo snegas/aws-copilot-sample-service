@@ -11,10 +11,10 @@ phases:
       - wget -q https://ecs-cli-v2-release.s3.amazonaws.com/copilot-linux-v1.28.0
       - mv ./copilot-linux-v1.28.0 ./copilot-linux
       - chmod +x ./copilot-linux
+      - pip3 install cfn-lint
   build:
     commands:
-      - echo "Run your tests"
-      # - make test
+      - cf-lint infrastructure/**/.yaml
   post_build:
     commands:
       - ls -l
