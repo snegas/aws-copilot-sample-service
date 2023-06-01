@@ -32,7 +32,7 @@ phases:
           fi
         done;
       - ls -lah ./infrastructure
-      - ~/.pyenv/versions/3.9.16/bin/cf-lint infrastructure/**/.yaml
+      - cfn-lint infrastructure/**/.yaml
 artifacts:
   files:
     - "infrastructure/*"
